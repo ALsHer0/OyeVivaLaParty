@@ -6,7 +6,59 @@
     <title>VivaLaParty | Cabinas Fotográficas Profesionales</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <style>
+        /* MODIFICACIONES PARA SOLUCIONAR EL PROBLEMA DEL HERO */
+        .hero {
+            min-height: 180vh; /* Cambiado de height:120vh a min-height:100vh */
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.85) 0%, rgba(74, 0, 192, 0.7) 100%), 
+                        url('https://i.ibb.co/CpNTYjFY/fondo-header.png') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 90px; /* Mantiene espacio para el header */
+            position: relative;
+            overflow: hidden;
+            /* Nuevo: asegura que el contenido se centre correctamente */
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            /* Nuevo: asegura que el contenido se ajuste verticalmente */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: calc(100vh - 90px); /* Resta la altura del header */
+        }
+
+        /* Asegurar que el texto typewriter tenga suficiente espacio */
+        .typewriter-text {
+            display: inline-block;
+            position: relative;
+            color: var(--yellow);
+            font-weight: 700;
+            min-height: 1.5em; /* Previene saltos de línea inesperados */
+        }
+
+        /* Otras mejoras visuales */
+        .hero-subtitle {
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            padding: 0 15px; /* Mejor legibilidad en móviles */
+        }
+
+        /* Resto del CSS original (sin cambios) */
         :root {
             --primary: #ffffff;
             --secondary: #0e0e0e;
@@ -213,81 +265,6 @@
             cursor: pointer;
             color: white;
             z-index: 1001;
-        }
-        
-        /* Hero Section */
-        .hero {
-            height: 120vh;
-            min-height: 700px;
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.85) 0%, rgba(74, 0, 192, 0.7) 100%), 
-                        url('https://i.ibb.co/CpNTYjFY/fondo-header.png') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding-top: 90px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 150px;
-            background: linear-gradient(transparent, var(--light));
-            z-index: 1;
-        }
-        
-        .hero-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero h1 {
-            color: white;
-            margin-bottom: 1.5rem;
-            text-shadow: 0 2px 15px rgba(0,0,0,0.4);
-        }
-        
-        .hero-subtitle {
-            color: var(--light);
-            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-            margin-bottom: 2.5rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 300;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-        }
-        
-        .typewriter-text {
-            display: inline-block;
-            position: relative;
-            color: var(--yellow);
-            font-weight: 700;
-        }
-        
-        .typewriter-text::after {
-            content: '';
-            position: absolute;
-            right: -12px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 4px;
-            height: 80%;
-            background: var(--pink);
-            animation: blink 0.7s infinite;
-        }
-        
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
         }
         
         .hero-buttons {
