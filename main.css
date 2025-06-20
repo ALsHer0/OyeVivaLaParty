@@ -544,6 +544,9 @@
             align-items: flex-start;
             gap: 20px;
         }
+        .contact-item:hover .contact-icon {
+            color: var(--pink);
+        }
         
         .contact-icon {
             width: 60px;
