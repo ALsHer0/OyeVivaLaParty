@@ -121,12 +121,12 @@ const mobileMenu = document.querySelector('.mobile-menu');
                 
                 // Crear el mensaje para WhatsApp
                 const whatsappMessage = 
-                    `*Nuevo mensaje de contacto VivaLaParty*%0A%0A` +
-                    `*Nombre:* ${name}%0A` +
-                    `*Email:* ${email}%0A` +
-                    `*Teléfono:* ${phone}%0A` +
-                    `*Tipo de evento:* ${eventType}%0A` +
-                    `*Mensaje:* ${message}`;
+                `*Nuevo mensaje de contacto VivaLaParty*
+                *Nombre:* ${name}
+                *Email:* ${email}
+                *Teléfono:* ${phone}
+                *Tipo de evento:* ${eventType}
+                *Mensaje:* ${message}`;
                 
                 // Crear el enlace de WhatsApp
                 const whatsappLink = `https://wa.me/526634625234?text=${encodeURIComponent(whatsappMessage)}`;
