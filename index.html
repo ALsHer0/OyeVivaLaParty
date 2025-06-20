@@ -3,93 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VivaLaParty | Cabinas Fotográficas Profesionales</title>
+    <title>VivaLaParty - Cabinas Fotográficas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* MODIFICACIONES PARA SOLUCIONAR EL PROBLEMA DEL HERO */
-        .hero {
-            min-height: 100vh; /* Cambiado de height:120vh a min-height:100vh */
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.85) 0%, rgba(74, 0, 192, 0.7) 100%), 
-                        url('https://i.ibb.co/CpNTYjFY/fondo-header.png') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding-top: 90px; /* Mantiene espacio para el header */
-            position: relative;
-            overflow: hidden;
-            /* Nuevo: asegura que el contenido se centre correctamente */
-            justify-content: center;
-        }
-
-        .hero-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-            position: relative;
-            z-index: 2;
-            /* Nuevo: asegura que el contenido se ajuste verticalmente */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: calc(100vh - 90px); /* Resta la altura del header */
-        }
-
-        /* Asegurar que el texto typewriter tenga suficiente espacio */
-
-        .typewriter-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100px; /* Altura mínima para evitar saltos */
-    width: 100%;
-}
-
-.typewriter-text {
-    display: inline-block;
-    position: relative;
-    color: var(--yellow);
-    text-align: center;
-    font-weight: 700;
-    min-height: 1.5em;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 0 10px; /* Espacio lateral en móviles */
-}
-
-/* .typewriter-text::after removed to avoid confusion with dynamic typewriter effect */
-
-        /* Otras mejoras visuales */
-        .hero-subtitle {
-            margin-bottom: 2.5rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-            padding: 0 15px; /* Mejor legibilidad en móviles */
-        }
-
-        /* Resto del CSS original (sin cambios) */
         :root {
             --primary: #ffffff;
             --secondary: #0e0e0e;
-            --accent: #6a11cb;
-            --accent-light: #8a2be2;
-            --accent-dark: #4a00c0;
-            --dark: #1a1a2e;
-            --light: #f8f9ff;
-            --pink: #ff2d95;
-            --yellow: #ffd166;
-            --mobile-menu-bg: rgba(26, 26, 46, 0.98);
+            --accent: #3f52e1;
+            --dark: #000000;
+            --light: #f7f9fc;
+            --mobile-menu-bg: #333;
             --card-bg: rgba(255, 255, 255, 0.95);
             --whatsapp: #25D366;
             --success: #d4edda;
             --error: #f8d7da;
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
         * {
@@ -101,121 +29,163 @@
         }
         
         body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.5;
+            color: #333;
             background-color: var(--light);
-            color: var(--dark);
             overflow-x: hidden;
             position: relative;
-            line-height: 1.6;
+            padding-bottom: 100px;
         }
         
-        h1, h2, h3, h4, h5 {
+        h1, h2, h3, h4 {
             font-family: 'Montserrat', sans-serif;
             margin-bottom: 0.8rem;
             color: var(--dark);
-            line-height: 1.2;
         }
         
         h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 900;
-            letter-spacing: -1px;
+            font-size: 2.8rem;
+            line-height: 1.2;
         }
         
         h2 {
-            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-size: 2.2rem;
             text-align: center;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
             position: relative;
         }
         
         h2:after {
             content: '';
             position: absolute;
-            bottom: -12px;
+            bottom: -8px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent), var(--pink));
-            border-radius: 4px;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
         }
         
         p {
-            margin-bottom: 1.2rem;
-            font-size: clamp(1rem, 1.05vw, 1.1rem);
-            color: #555;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
         }
         
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
         
         section {
-            padding: 5rem 0;
+            padding: 3.5rem 0;
         }
         
         .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            display: inline-block;
+            background: var(--accent);
             color: white;
-            padding: 14px 32px;
-            border-radius: 50px;
+            padding: 10px 25px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: 600;
-            transition: var(--transition);
+            transition: all 0.3s ease;
             border: none;
             cursor: pointer;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 1rem;
-            box-shadow: 0 8px 20px rgba(106, 17, 203, 0.3);
-            gap: 10px;
+            letter-spacing: 0.5px;
+            font-size: 0.85rem;
         }
         
         .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(106, 17, 203, 0.4);
+            background: #2e41d0;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
         }
         
         .btn-secondary {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-            box-shadow: none;
+            background: var(--secondary);
         }
         
         .btn-secondary:hover {
-            background: white;
-            color: var(--accent);
-            border-color: white;
+            background: #2e41d0;
         }
         
-        /* Header & Navigation */
+        .btn-whatsapp {
+            width: 100%;
+            padding: 18px;
+            background: #25d366;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(13, 73, 35, 0.3);
+        }
+        .btn-whatsapp i {
+            margin-right: 10px;
+            font-size: 1.4rem;
+
+        }
+        
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+        }
+        .phone-option {
+            display: flex;
+            gap: 15px;
+        }
+        .phone-options input {
+            flex: 1;
+        }
+        /* Responsive */
+        @media (max-width: 900px) {
+            .contact-container {
+                flex-direction: column;
+            }
+            .contact-info, .contact-form {
+                padding: 30px;
+            }
+            .phone-options {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+       @media (max-width: 480px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-info, .contact-form {
+                padding: 25px;
+            }
+        }
+        
+        /* Header & Navigation - Reducido */
         header {
-            background-color: rgba(26, 26, 46, 0.95);
-            box-shadow: 0 1px 15px rgba(0,0,0,0.15);
+            background-color: black;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
             z-index: 1000;
-            height: 90px;
-            transition: var(--transition);
-        }
-        
-        header.scrolled {
-            height: 80px;
-            background-color: rgba(26, 26, 46, 0.98);
-            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+            height: 70px; /* Reducido */
         }
         
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0.8rem 0; /* Reducido */
             height: 100%;
         }
         
@@ -223,18 +193,17 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            gap: 15px;
         }
         
         .logo-image {
-            height: 80px;
+            height: 50px; /* Reducido */
             width: auto;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
         }
+        
         .logo-image:hover {
             transform: rotate(360deg);
         }
-
         
         .nav-links {
             display: flex;
@@ -242,17 +211,21 @@
         }
         
         .nav-links li {
-            margin-left: 2rem;
+            margin-left: 1.5rem; /* Reducido */
         }
         
         .nav-links a {
             text-decoration: none;
-            color: rgba(255, 255, 255, 0.9);
+            color: var(--primary);
             font-weight: 500;
-            font-size: 1.05rem;
-            transition: var(--transition);
+            font-size: 0.95rem; /* Reducido */
+            transition: color 0.3s;
             position: relative;
-            padding: 5px 0;
+            padding: 3px 0; /* Reducido */
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
         }
         
         .nav-links a:after {
@@ -262,12 +235,8 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--pink);
-            transition: var(--transition);
-        }
-        
-        .nav-links a:hover {
-            color: white;
+            background: var(--primary);
+            transition: width 0.3s ease;
         }
         
         .nav-links a:hover:after {
@@ -276,498 +245,1190 @@
         
         .mobile-menu {
             display: none;
-            font-size: 1.5rem;
+            font-size: 1.3rem; /* Reducido */
             cursor: pointer;
-            color: white;
+            color: var(--primary);
             z-index: 1001;
         }
         
-        .hero-buttons {
+        /* Hero Section - Reducido */
+        .hero {
+            height: 85vh; /* Reducido */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('fondo_header.png') no-repeat center center/cover;
             display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-        }
-        
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 5rem;
-            flex-wrap: wrap;
-        }
-        
-        .stat-item {
+            align-items: center;
             text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: var(--transition);
+            color: white;
+            padding-top: 70px; /* Ajustado a la altura reducida del header */
         }
         
-        .stat-item:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        .hero-content {
+            max-width: 700px; /* Reducido */
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out;
+            padding: 0 20px;
         }
         
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 0.3rem;
-            color: var(--yellow);
-            font-family: 'Montserrat', sans-serif;
+        .hero h1 {
+            color: white;
+            margin-bottom: 1.2rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            font-size: 3rem; /* Reducido */
         }
         
-        .stat-label {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            opacity: 0.9;
+        .hero p {
+            font-size: 1.1rem; /* Reducido */
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
-        /* Services Section */
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Services - Cajas reducidas */
         .services {
-            background: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .services::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            left: -100px;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-light), var(--pink));
-            opacity: 0.05;
-            z-index: 0;
-        }
-        
-        .services::after {
-            content: '';
-            position: absolute;
-            bottom: -150px;
-            right: -100px;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent), var(--accent-light));
-            opacity: 0.05;
-            z-index: 0;
+            background-color: white;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-            position: relative;
-            z-index: 1;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem; /* Reducido */
+            margin-top: 2.5rem; /* Reducido */
         }
         
         .service-card {
             background: var(--card-bg);
-            border-radius: 20px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 100%;
-            border: 1px solid rgba(0,0,0,0.05);
         }
         
         .service-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 15px 35px rgba(106, 17, 203, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
         }
         
         .service-img {
-            height: 250px;
+            height: 200px; /* Reducido */
             overflow: hidden;
-            position: relative;
         }
         
         .service-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.8s ease;
+            transition: transform 0.5s ease;
         }
         
         .service-card:hover .service-img img {
-            transform: scale(1.1);
+            transform: scale(1.08);
         }
         
         .service-content {
-            padding: 2rem;
+            padding: 1.5rem; /* Reducido */
         }
         
         .service-content h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: var(--accent-dark);
+            color: var(--dark);
+            font-size: 1.4rem; /* Reducido */
+            margin-bottom: 0.6rem;
         }
         
-        .service-content ul {
+        .service-content p {
+            margin-bottom: 0.8rem;
+            color: #555;
+            font-size: 0.9rem;
+        }
+        
+        .service-content i {
+            color: var(--accent);
+            margin-right: 6px;
+            font-size: 0.9rem;
+        }
+        
+        /* Service Inclusions - Mejorado */
+        .inclusions {
+            background: var(--accent);
+            color: white;
+            padding: 5rem 0;
+        }
+        
+        .inclusions h2 {
+            color: white;
+            margin-bottom: 2.5rem;
+        }
+        
+        .inclusions h2:after {
+            background: white;
+        }
+        
+        .inclusions-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .inclusion-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .inclusion-box:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+        }
+        
+        .inclusion-box img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .inclusion-content h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .inclusion-content h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+        }
+        
+        .inclusion-features {
             list-style: none;
             margin: 1.5rem 0;
         }
         
-        .service-content ul li {
-            margin-bottom: 0.8rem;
+        .inclusion-features li {
+            padding: 0.8rem 0;
             display: flex;
-            align-items: flex-start;
-            gap: 10px;
+            align-items: center;
+            font-size: 1.05rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .service-content ul li i {
-            color: var(--pink);
-            margin-top: 5px;
+        .inclusion-features li:last-child {
+            border-bottom: none;
         }
         
-        /* Gallery Section */
-        .gallery {
-            background: linear-gradient(to bottom, var(--light) 0%, #f0f2ff 100%);
-            position: relative;
-            overflow: hidden;
+        .inclusion-features i {
+            color: #ffd700;
+            margin-right: 12px;
+            font-size: 1.2rem;
+            min-width: 25px;
         }
         
-        .gallery-header {
+        .inclusion-footer {
+            margin-top: auto;
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto 3rem;
+            padding-top: 1.5rem;
         }
         
-        .gallery-header p {
-            font-size: 1.1rem;
+        /* Gallery */
+        .gallery {
+            background-color: #ffffff;
         }
         
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        
-        .gallery-item {
+        /* Pricing - Cajas reducidas */
+        .pricing {
+            background: var(--accent);
+            padding: 3.5rem 0; /* Reducido */
             position: relative;
-            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            height: 350px;
-            cursor: pointer;
-            transition: var(--transition);
         }
         
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(106, 17, 203, 0.2);
-        }
-        
-        .gallery-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s ease;
-        }
-        
-        .gallery-item:hover .gallery-img {
-            transform: scale(1.1);
-        }
-        
-        .gallery-overlay {
+        .pricing:before {
+            content: "";
             position: absolute;
-            bottom: 0;
+            top: 0;
             left: 0;
             width: 100%;
-            padding: 25px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            color: white;
-            transform: translateY(80px);
-            transition: var(--transition);
-            opacity: 0;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(230, 230, 230, 0.3) 0%, transparent 70%);
+            z-index: 1;
         }
         
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
-            opacity: 1;
+        .pricing .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .pricing h2 {
+            color: #000000;
+            position: relative;
+            margin-bottom: 2.5rem; /* Reducido */
         }
         
-        .gallery-overlay h3 {
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-bottom: 10px;
+        .pricing h2:after {
+            background: #3f52e1;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem; /* Reducido */
+            margin-top: 1.5rem; /* Reducido */
         }
         
-        .gallery-overlay p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            color: rgba(255,255,255,0.9);
-        }
-        
-        .gallery-category {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: var(--pink);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.88);
+            border-radius: 12px;
+            padding: 1.8rem; /* Reducido */
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+            position: relative;
+            overflow: hidden;
             z-index: 2;
         }
         
-        /* Social Media Icons */
-        .social-svg {
-            width: 24px;
-            height: 24px;
-            fill: var(--accent);
-            transition: var(--transition);
+        .pricing-card:before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+            z-index: -1;
         }
         
-        .social-icon:hover .social-svg {
-            fill: white;
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+            background: rgba(255, 255, 255, 0.92);
         }
         
-        /* Contact Section */
-        .contact {
-            background: white;
+        .pricing-card.popular {
+            border: 2px solid #3f52e1;
+            transform: scale(1.03);
+        }
+        
+        .popular-tag {
+            position: absolute;
+            top: -12px; /* Reducido */
+            left: 50%;
+            transform: translateX(-50%);
+            background: #3f52e1;
+            color: white;
+            padding: 6px 20px; /* Reducido */
+            border-radius: 20px;
+            font-size: 0.9rem; /* Reducido */
+            font-weight: 600;
+            box-shadow: 0 3px 12px rgba(63, 82, 225, 0.3);
+            z-index: 3;
+        }
+        
+        .price {
+            font-size: 2.2rem; /* Reducido */
+            color: #333;
+            margin: 1.2rem 0; /* Reducido */
+            font-weight: 700;
             position: relative;
         }
         
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            align-items: center;
+        .price span {
+            font-size: 1rem; /* Reducido */
+            color: #666;
+            font-weight: 400;
         }
         
-        .contact-info {
+        .features {
+            list-style: none;
+            margin: 1.5rem 0; /* Reducido */
+            text-align: left;
+            padding: 0 10px; /* Reducido */
+        }
+        
+        .features li {
+            padding: 0.6rem 0; /* Reducido */
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            position: relative;
+            font-size: 0.92rem; /* Reducido */
+        }
+        
+        .features li:before {
+            content: '✓';
+            color: #3f52e1;
+            margin-right: 10px; /* Reducido */
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .features li:last-child {
+            border-bottom: none;
+        }
+        
+/* ======= ESTILOS PARA SECCIÓN DE CONTACTO ======= */
+#contacto {
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
+    padding: 4rem 0;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.contact-info {
+    flex: 1;
+    background: linear-gradient(135deg, #3f52e1 0%, #2e41d0 100%);
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-form {
+    flex: 1.2;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-align: left;
+}
+
+.contact-info h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background: #ffd166;
+    border-radius: 2px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.contact-item i {
+    font-size: 1.8rem;
+    width: 50px;
+    color: #ffd166;
+    min-width: 40px;
+}
+
+.contact-item-content {
+    margin-left: 15px;
+}
+
+.contact-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #ffd166;
+}
+
+.contact-item p, 
+.contact-item a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.contact-item a:hover {
+    color: #ffd166;
+    text-decoration: underline;
+}
+
+.social-section {
+    margin-top: 40px;
+}
+
+.social-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.social-icon:hover {
+    background: #ffd166;
+    transform: translateY(-5px);
+    color: #2e41d0;
+}
+
+.contact-form h2 {
+    font-size: 2.2rem;
+    color: #2e41d0;
+    margin-bottom: 30px;
+    position: relative;
+    text-align: left;
+}
+
+.contact-form h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background: #3f52e1;
+    border-radius: 2px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background: white;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-color: #3f52e1;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(63, 82, 225, 0.2);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.char-count {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+.char-count.limit {
+    color: #ff6b6b;
+}
+
+.btn-whatsapp {
+    width: 100%;
+    padding: 18px;
+    background: #25d366;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp i {
+    margin-right: 10px;
+    font-size: 1.4rem;
+}
+
+.btn-whatsapp:hover {
+    background: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+}
+
+.phone-options {
+    display: flex;
+    gap: 15px;
+}
+
+.phone-options input {
+    flex: 1;
+}
+
+/* Responsive para sección de contacto */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-info, .contact-form {
+        padding: 30px;
+    }
+    
+    .phone-options {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info, .contact-form {
+        padding: 25px;
+    }
+    
+    .contact-info h2, 
+    .contact-form h2 {
+        font-size: 1.8rem;
+    }
+}
+        
+        /* Footer - Reducido */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0 1.5rem; /* Reducido */
+            text-align: center;
+        }
+        
+        .footer-content {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            align-items: center;
         }
         
-        .contact-item {
+        .footer-logo {
+            margin-bottom: 1.2rem; /* Reducido */
+        }
+        
+        .footer-logo img {
+            height: 55px; /* Reducido */
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        
+        .footer-links {
             display: flex;
-            align-items: flex-start;
-            gap: 20px;
+            gap: 1.8rem; /* Reducido */
+            margin: 1.2rem 0; /* Reducido */
+            flex-wrap: wrap;
+            justify-content: center;
         }
         
-        .contact-icon {
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem; /* Reducido */
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            margin-top: 1.8rem; /* Reducido */
+            padding-top: 1.5rem; /* Reducido */
+            border-top: 1px solid rgba(255,255,255,0.1);
+            width: 100%;
+            font-size: 0.9rem; /* Reducido */
+            color: #aaa;
+        }
+        
+        /* Estilos del carrusel - Reducido */
+        .carousel-container {
+            position: relative;
+            max-width: 800px; /* Reducido */
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px; /* Reducido */
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* Reducido */
+        }
+        
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .carousel-item {
+            min-width: 100%;
+            position: relative;
+        }
+        
+        .carousel-item img {
+            width: 100%;
+            height: 380px; /* Reducido */
+            object-fit: cover;
+            display: block;
+        }
+        
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.7);
+            border: none;
+            width: 45px; /* Reducido */
+            height: 45px; /* Reducido */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.3rem; /* Reducido */
+            color: var(--primary);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .carousel-control:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Reducido */
+        }
+        
+        .carousel-control.prev {
+            left: 15px; /* Reducido */
+        }
+        
+        .carousel-control.next {
+            right: 15px; /* Reducido */
+        }
+        
+        .carousel-indicators {
+            position: absolute;
+            bottom: 15px; /* Reducido */
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 8px; /* Reducido */
+            z-index: 10;
+        }
+        
+        .carousel-indicators span {
+            width: 10px; /* Reducido */
+            height: 10px; /* Reducido */
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        
+        .carousel-indicators span.active {
+            background: var(--primary);
+            transform: scale(1.2);
+        }
+        
+        /* Chatbot */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .chatbot-btn {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            background: var(--whatsapp);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .chatbot-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .chatbot-btn i {
             color: white;
-            flex-shrink: 0;
+            font-size: 1.8rem;
         }
         
-        .contact-text h3 {
-            margin-bottom: 0.3rem;
-            font-size: 1.3rem;
+        .chatbot-window {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            width: 300px;
+            height: 400px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1001;
         }
         
-        .contact-text a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .contact-text a:hover {
-            color: var(--pink);
-        }
-        
-        .social-links {
+        .chatbot-header {
+            background: var(--whatsapp);
+            color: white;
+            padding: 15px;
             display: flex;
-            gap: 15px;
-            margin-top: 1rem;
+            align-items: center;
+            gap: 10px;
         }
         
-        .social-icon {
-            width: 45px;
-            height: 45px;
+        .chatbot-header img {
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            background: rgba(106, 17, 203, 0.1);
+        }
+        
+        .chatbot-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .message {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 18px;
+            font-size: 0.9rem;
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .bot-message {
+            background: #f0f4f8;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .user-message {
+            background: var(--accent);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .chatbot-input {
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+            border-top: 1px solid #eee;
+        }
+        
+        .chatbot-input input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+        
+        .chatbot-input button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--whatsapp);
+            color: white;
+            border: none;
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: var(--transition);
         }
         
-        .social-icon:hover {
-            background: var(--accent);
-            transform: translateY(-5px);
+        /* Mensaje de estado */
+        .status-message {
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
         }
         
+        .success {
+            background-color: var(--success);
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .error {
+            background-color: var(--error);
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* MEJORAS AL FORMULARIO DE CONTACTO */
         .contact-form {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            border-radius: 12px;
+            padding: 1.8rem;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.18);
         }
         
         .form-group {
             margin-bottom: 1.5rem;
+            position: relative;
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 8px;
             font-weight: 500;
+            color: #333;
         }
         
         .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group select,
+        .form-group textarea {
             width: 100%;
-            padding: 14px 20px;
+            padding: 12px 15px;
             border: 1px solid #ddd;
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: var(--transition);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border 0.3s;
+            background: rgba(255, 255, 255, 0.85);
         }
         
         .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
+        .form-group select:focus,
+        .form-group textarea:focus {
             border-color: var(--accent);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.1);
+            box-shadow: 0 0 0 2px rgba(63, 82, 225, 0.2);
+        }
+        
+        .error-message {
+            color: #ff3860;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .input-error {
+            border-color: #ff3860 !important;
+        }
+        
+        .char-counter {
+            text-align: right;
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
         }
         
         .form-group textarea {
-            min-height: 150px;
+            min-height: 120px;
             resize: vertical;
         }
         
-        .btn-whatsapp {
-            background: linear-gradient(135deg, var(--whatsapp), #128C7E);
+        .submit-btn {
             width: 100%;
+            padding: 12px;
+            font-size: 16px;
+        }
+        
+        /* Estilos para carrousel de reels de instagram */
+        .social-videos {
+            background: black;
+            color: white;
+            padding: 5rem 0;
+            overflow: hidden;
+        }
+        
+        .social-videos h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-videos h2:after {
+            background: white;
+        }
+        
+        .videos-carousel-container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .videos-carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+            padding: 0 10px; /* Espacio para el efecto de desplazamiento */
+        }
+        
+        .video-item {
+            min-width: calc(33.333% - 20px); /* 3 elementos visibles */
+            margin: 0 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            height: 500px; /* Altura fija para mantener uniformidad */
+        }
+        
+        .video-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        
+        .video-container {
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
-            font-size: 1.1rem;
+            background: #000;
+            padding: 10px;
         }
         
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 4rem 0 2rem;
-            position: relative;
+        .instagram-embed {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
         }
         
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-        }
-        
-        .footer-col h3 {
-            color: var(--yellow);
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-col h3:after {
-            content: '';
+        .videos-nav {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--pink);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            pointer-events: none;
+            z-index: 10;
         }
         
-        .footer-about p {
-            color: rgba(255,255,255,0.7);
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-links a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            transition: var(--transition);
+        .videos-nav-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.7);
             display: flex;
             align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            pointer-events: all;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            color: var(--dark);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .videos-nav-btn:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+        
+        .videos-indicators {
+            display: flex;
+            justify-content: center;
             gap: 10px;
+            margin-top: 20px;
         }
         
-        .footer-links a:hover {
-            color: var(--pink);
-            transform: translateX(5px);
+        .videos-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
         
-        .footer-links a i {
-            color: var(--pink);
-            font-size: 0.9rem;
-        }
-        
-        .copyright {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.5);
-            font-size: 0.9rem;
+        .videos-indicator.active {
+            background: white;
+            transform: scale(1.2);
         }
         
         /* Responsive */
-        @media (max-width: 1100px) {
-            .nav-links li {
-                margin-left: 1.5rem;
+        @media (max-width: 1200px) {
+            .video-item {
+                min-width: calc(50% - 20px); /* 2 elementos visibles */
             }
         }
         
-        @media (max-width: 900px) {
+        @media (max-width: 768px) {
+            .video-item {
+                min-width: calc(100% - 20px); /* 1 elemento visible */
+            }
+            
+            .videos-nav {
+                padding: 0 10px;
+            }
+            
+            .videos-nav-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .social-videos {
+                padding: 3rem 0;
+            }
+            
+            .video-item {
+                height: 450px;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            section {
+                padding: 3rem 0;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+            
+            /* Menú móvil */
             .nav-links {
                 position: fixed;
                 top: 0;
-                right: -100%;
-                width: 280px;
+                left: -100%;
+                width: 80%;
                 height: 100vh;
                 background: var(--mobile-menu-bg);
                 flex-direction: column;
-                align-items: flex-start;
-                padding: 100px 30px 30px;
-                transition: var(--transition);
+                align-items: center;
+                padding-top: 5rem;
+                transition: all 0.4s ease;
                 z-index: 1000;
             }
             
             .nav-links.active {
-                right: 0;
+                left: 0;
             }
             
             .nav-links li {
-                margin: 1rem 0;
+                margin: 1.5rem 0; /* Reducido */
                 width: 100%;
+                text-align: center;
             }
             
             .nav-links a {
-                font-size: 1.2rem;
-                padding: 10px 0;
+                color: white;
+                font-size: 1.1rem;
+                padding: 0.7rem 0; /* Reducido */
                 display: block;
+                width: 100%;
+            }
+            
+            .nav-links a:hover {
+                color: #5a6eff;
+            }
+            
+            .nav-links a:after {
+                background: white;
+            }
+            
+            /* Separadores entre elementos del menú */
+            .nav-links li {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-links li:last-child {
+                border-bottom: none;
             }
             
             .mobile-menu {
@@ -776,91 +1437,100 @@
             }
             
             .hero {
-                min-height: 600px;
+                height: 60vh;
+                min-height: auto;
             }
             
-            .stat-item {
-                padding: 15px 20px;
+            .hero h1 {
+                font-size: 2.2rem;
             }
             
-            .stat-number {
-                font-size: 2rem;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
+            .hero p {
+                font-size: 1rem;
             }
             
-            .hero-buttons .btn {
-                width: 100%;
-                max-width: 300px;
+            .pricing-card.popular {
+                transform: scale(1);
             }
             
-            .hero-stats {
-                gap: 1.5rem;
-                margin-top: 3rem;
+            .social-links a {
+                width: 45px; /* Reducido */
+                height: 45px; /* Reducido */
             }
             
-            .service-card, .gallery-item {
-                max-width: 500px;
-                margin: 0 auto;
+            .social-icon {
+                width: 1.4em; /* Reducido */
+                height: 1.4em; /* Reducido */
             }
-        }
+            
+            /* Carrusel en móviles */
+            .carousel-item img {
+                height: 280px; /* Reducido */
+            }
+            
+            .carousel-control {
+                width: 36px; /* Reducido */
+                height: 36px; /* Reducido */
+                font-size: 1.1rem; /* Reducido */
+            }
+            
+            .carousel-indicators span {
+                width: 8px; /* Reducido */
+                height: 8px; /* Reducido */
+            }
+            
+            .chatbot-window {
+                width: 280px;
+                height: 350px;
+            }
         
         @media (max-width: 480px) {
             .hero {
-                min-height: 500px;
+                height: 50vh;
             }
             
-            .logo-text {
-                font-size: 1.2rem;
+            .hero h1 {
+                font-size: 1.8rem;
             }
             
-            .stat-item {
-                width: 100%;
+            .hero p {
+                font-size: 0.9rem;
             }
             
-            .footer-content {
+            .services-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .carousel-item img {
+                height: 220px;
+            }
+            
+            .contact-container {
                 grid-template-columns: 1fr;
             }
         }
-        /* Estilos para notificación */
-        .notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 15px 25px;
-            border-radius: 8px;
-            color: white;
-            font-weight: 500;
-            z-index: 9999;
-            box-shadow: 0 4 px 15px rgba(0,0,0,0.2);
-            transform: translateX(120%);
-            transition: transform 0.5s ease;
-        }
-        .notification.success {
-            background: linear-gradient(135deg, #28a745, #1e7e34);
-        }
-        .notification.error {
-            transform: translateX(0);
+        
+        /* Clase para ocultar elementos */
+        .hidden {
+            display: none !important;
         }
     </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header id="header">
+    <!-- Header & Navigation - Reducido -->
+    <header>
         <div class="container">
             <nav>
-                <a href="#inicio" class="logo">
-                    <img src="https://i.ibb.co/7JbzLS6f/logo.png" alt="VivaLaParty Logo" class="logo-image">
+                <a href="#" class="logo">
+                    <img src="logo.png" alt="VivaLaParty Logo" class="logo-image">
                 </a>
                 <ul class="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#incluye">Qué Incluye</a></li>
                     <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#precios">Precios</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
                 <div class="mobile-menu">
@@ -870,323 +1540,414 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Reducido -->
     <section id="inicio" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Transforma tus <span class="typewriter-container"><span class="typewriter-text" id="typewriter">eventos</span></span> con VivaLaParty</h1>
-                <p class="hero-subtitle">Cabinas fotográficas profesionales para bodas, fiestas y eventos corporativos. Captura momentos inolvidables con fotos instantáneas y personalizadas.</p>
+                <h1>¡Diversión Instantánea para Tus Eventos!</h1>
+                <p>Cabinas fotográficas profesionales para bodas, fiestas y eventos corporativos. Captura momentos inolvidables con fotos instantáneas y personalizadas.</p>
                 <div class="hero-buttons">
-                    <a href="#contacto" class="btn"><i class="fas fa-calendar-check"></i> Reserva Ahora</a>
-                    <a href="#galeria" class="btn btn-secondary"><i class="fas fa-images"></i> Ver Galería</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Eventos Realizados</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">98%</div>
-                        <div class="stat-label">Clientes Satisfechos</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Soporte Personalizado</div>
-                    </div>
+                    <a href="#contacto" class="btn">Reserva Ahora</a>
+                    <a href="#incluye" class="btn btn-secondary">Ver Servicios</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section - Cajas reducidas -->
     <section id="servicios" class="services">
         <div class="container">
             <h2>Nuestros Servicios</h2>
-            <p class="gallery-header" style="text-align: center;">Ofrecemos experiencias únicas que transformarán tu evento en algo inolvidable</p>
-            
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img">
-                    
-                        <img src="https://i.ibb.co/BFTkbZ8/Imagen-de-Whats-App-2025-06-18-a-las-18-53-25-6cefd019.jpg" alt="Cabina Fotográfica">
-                        <div class="gallery-category">Más Popular</div>
+                        <img src="cabina_fotografica.jpg" alt="Cabina clásica">
                     </div>
                     <div class="service-content">
                         <h3>Cabina Fotográfica</h3>
-                        <p>La experiencia clásica mejorada con tecnología de punta para fotos instantáneas de alta calidad.</p>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> Fotos ilimitadas durante el evento</li>
-                            <li><i class="fas fa-check-circle"></i> Personalización con tu logo y colores</li>
-                            <li><i class="fas fa-check-circle"></i> Accesorios divertidos y temáticos</li>
-                            <li><i class="fas fa-check-circle"></i> Plataforma digital para descargas</li>
-                            <li><i class="fas fa-check-circle"></i> Personalización de tira fotográfica</li>
-                        </ul>
-                        <a href="#contacto" class="btn">Solicitar Información</a>
+                        <p>La experiencia clásica con fotos instantáneas de alta calidad, accesorios divertidos y personalización total.</p>
+                        <p><i class="fas fa-check"></i> Ideal para bodas y fiestas</p>
+                        <p><i class="fas fa-check"></i> Fotos en tiras clásicas</p>
                     </div>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-img">
-                        
-                        <img src="https://i.ibb.co/7dwfgsqX/cabina-aerea.jpg" alt="Cabina 360">
+                        <img src="cabina_aerea.jpg" alt="Cabina abierta">
                     </div>
                     <div class="service-content">
-                        <h3>Cabina Fotográfica 360°</h3>
-                        <p>La última innovación en fotografía para eventos: videos en 360° </p>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> Videos de 10 segundos</li>
-                            <li><i class="fas fa-check-circle"></i> Efectos especiales y realidad aumenta</li>
-                            <li><i class="fas fa-check-circle"></i> Compartir en redes sociales al instante</li>
-                            <li><i class="fas fa-check-circle"></i> Plataforma digital para descargas</li>
-                            <li><i class="fas fa-check-circle"></i> Accesorios y fondos personalizados</li>
-                        </ul>
-                        <a href="#contacto" class="btn">Solicitar Información</a>
+                        <h3>Cabina de Video</h3>
+                        <p>Grabaciones divertidas con efectos especiales, perfectas para capturar los mejores momentos de tu evento.</p>
+                        <p><i class="fas fa-check"></i> Videos compartidos al instante</p>
+                        <p><i class="fas fa-check"></i> Personalización completa</p>
                     </div>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-img">
-                        <!-- REEMPLAZAR CON TU IMAGEN -->
-                        <img src="" alt="Álbumes Personalizados">
+                        <img src="fondo.jpg" alt="Fotografía 360">
                     </div>
                     <div class="service-content">
-                        <h3>Álbumes Personalizados</h3>
-                        <p>Convierte tus fotos en recuerdos tangibles con nuestros álbumes de lujo personalizados.</p>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> Diseño exclusivo para tu evento</li>
-                            <li><i class="fas fa-check-circle"></i> Papel de alta calidad premium</li>
-                            <li><i class="fas fa-check-circle"></i> Hasta 100 fotos por álbum</li>
-                            <li><i class="fas fa-check-circle"></i> Portadas personalizadas</li>
-                            <li><i class="fas fa-check-circle"></i> Entrega express en 72 horas</li>
-                        </ul>
-                        <a href="#contacto" class="btn">Solicitar Información</a>
+                        <h3>Fotografía 360°</h3>
+                        <p>La experiencia más innovadora: vídeos en 360 grados y fotos esféricas que capturan cada ángulo.</p>
+                        <p><i class="fas fa-check"></i> Vídeos cortos de 15 segundos</p>
+                        <p><i class="fas fa-check"></i> Efectos especiales</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Service Inclusions - Mejorado -->
+    <section id="incluye" class="inclusions">
+        <div class="container">
+            <h2>Qué Incluye</h2>
+            <div class="inclusions-container">
+                <div class="inclusion-box">
+                    <img src="cabina_fotografica.jpg" alt="Cabina Fotográfica">
+                    <div class="inclusion-content">
+                        <h3>Cabina Fotográfica Estándar</h3>
+                        <ul class="inclusion-features">
+                            <li><i class="fas fa-camera"></i> Fotografía digital de alta resolución</li>
+                            <li><i class="fas fa-images"></i> Impresiones ilimitadas durante el evento</li>
+                            <li><i class="fas fa-paint-brush"></i> Personalización con logo y colores del evento</li>
+                            <li><i class="fas fa-box-open"></i> Accesorios divertidos: gafas, sombreros, disfraces</li>
+                            <li><i class="fas fa-lightbulb"></i> Iluminación profesional para fotos perfectas</li>
+                            <li><i class="fas fa-user-friends"></i> Asistente dedicado durante todo el evento</li>
+                        </ul>
+                    </div>
+                    <div class="inclusion-footer">
+                        <a href="#contacto" class="btn">Reservar Ahora</a>
+                    </div>
+                </div>
+                
+                <div class="inclusion-box">
+                    <img src="cabina_aerea.jpg" alt="Cabina 360 Aérea">
+                    <div class="inclusion-content">
+                        <h3>Cabina 360° Aérea</h3>
+                        <ul class="inclusion-features">
+                            <li><i class="fas fa-sync-alt"></i> Sistema de rotación 360° profesional</li>
+                            <li><i class="fas fa-video"></i> Videos de 15 segundos con efectos especiales</li>
+                            <li><i class="fas fa-cloud-download-alt"></i> Compartir en redes sociales al instante</li>
+                            <li><i class="fas fa-magic"></i> Efectos de luz LED sincronizados</li>
+                            <li><i class="fas fa-mobile-alt"></i> Plataforma digital para descargar contenido</li>
+                            <li><i class="fas fa-gift"></i> Accesorios premium y fondos personalizados</li>
+                        </ul>
+                    </div>
+                    <div class="inclusion-footer">
+                        <a href="#contacto" class="btn">Reservar Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section - Reducido -->
     <section id="galeria" class="gallery">
         <div class="container">
-            <h2>Nuestra Galería</h2>
-            <p class="gallery-header">Momentos inolvidables capturados en los eventos más especiales con nuestras cabinas fotográficas</p>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-category">Cumpleaños</div>
-                
-                    <img src="https://i.ibb.co/b5QzFkkq/Imagen-de-Whats-App-2025-06-18-a-las-18-53-25-cf4d53bd.jpg" alt="Cumpleaños" class="gallery-img">
-                    <div class="gallery-overlay">
-                        <h3>La alegría capturada en un solo click</h3>
-                        <p>Fotos divertidas con todos los invitados</p>
+            <h2>Fotos de Nuestros Clientes</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item active">
+                        <img src="p10.jpg" alt="Grupo de amigos">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="p15.jpg" alt="Pareja divertida">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="p14.jpg" alt="Fiesta de graduación">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="p6.jpg" alt="Fiesta corporativa">
                     </div>
                 </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-category">XV años</div>
-                    
-                    <img src="https://i.ibb.co/Txz6CXCZ/fondo.jpg" alt="XV años" class="gallery-img">
-                    <div class="gallery-overlay">
-                        <h3>Emoción pura, marco a marco</h3>
-                        <p>No solo fotos... ¡experiencias que laten en el corazón! 💖</p>
-                    </div>
+                <button class="carousel-control prev" aria-label="Anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-control next" aria-label="Siguiente">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="carousel-indicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section - Cajas reducidas -->
+   <section id="precios" class="pricing">
+        <div class="container">
+            <h2>Nuestros Paquetes</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Básico</h3>
+                    <div class="price">$3200 <span>/evento</span></div>
+                    <ul class="features">
+                        <li>2 horas de servicio</li>
+                        <li>Cabina inflable con luz led</li>
+                        <li>4 fotos por tira personalizada</li>
+                        <li>Staff especializado</li>
+                        <li>Impresiones ilimitadas</li>
+                        <li>Iluminación de estudio</li>
+                    </ul>
+                    <a href="#contacto" class="btn">Reservar</a>
                 </div>
                 
-                <div class="gallery-item">
-                    <div class="gallery-category">Cumpleaños</div>
-            
-                    <img src="https://i.ibb.co/2Y39W21f/p1.jpg" alt="Fiesta de cumpleaños" class="gallery-img">
-                    <div class="gallery-overlay">
-                        <h3>Cuando la diersión se convierte arte</h3>
-                        <p>Tu felicidad, nuestra mejor obra de arte 🎨</p>
-                    </div>
+                <div class="pricing-card popular">
+                    <div class="popular-tag">MÁS POPULAR</div>
+                    <h3>Premium</h3>
+                    <div class="price">$4500 <span>/evento</span></div>
+                    <ul class="features">
+                        <li>3 horas de servicio</li>
+                        <li>Cabina de video o fotográfica</li>
+                        <li>Enlace a galería virtual</li>
+                        <li>2 asistentes</li>
+                        <li>Personalización avanzada</li>
+                        <li>Accesorios premium</li>
+                        <li>Álbum digital del evento</li>
+                    </ul>
+                    <a href="#contacto" class="btn">Reservar</a>
                 </div>
                 
-                <div class="gallery-item">
-                    <div class="gallery-category">Graduaciones</div>
-                    
-                    <img src="https://i.ibb.co/b5QzFkkq/Imagen-de-Whats-App-2025-06-18-a-las-18-53-25-cf4d53bd.jpg" alt="Graduación" class="gallery-img">
-                    <div class="gallery-overlay">
-                        <h3>¡Sonrisas que se contagian en cada flash!</h3>
-                        <p>No capturamos poses... ¡capturamos esencias! ✨</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-category">Eventos</div>
-                
-                    <img src="https://i.ibb.co/M5c3frgX/p12.jpg" alt="Eventos" class="gallery-img">
-                    <div class="gallery-overlay">
-                        <h3>La fórmula secreta para recuerdos imborrables</h3>
-                        <p>Haz que tus invitados hablen de tu fiesta por años 👇</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-category">Fiestas</div>
-                    
-                    <img src="https://i.ibb.co/KpLzkx25/p5.jpg" alt="Fiestas" class="gallery-img">
-                    <div class="gallery-overlay">
-                        <h3>Instantes mágicos convertidos en tesoros</h3>
-                        <p>Dale un giro épico a tu celebración ➡️</p>
-                    </div>
+                <div class="pricing-card">
+                    <h3>Deluxe</h3>
+                    <div class="price">$5800 <span>/evento</span></div>
+                    <ul class="features">
+                        <li>4 horas de servicio</li>
+                        <li>Cabina 360 Aérea</li>
+                        <li>Enlace a galería virtual</li>
+                        <li>3 asistentes</li>
+                        <li>Personalización completa</li>
+                        <li>Accesorios premium y disfraces</li>
+                        <li>Álbum digital y físico premium</li>
+                        <li>Entrega express 24h</li>
+                    </ul>
+                    <a href="#contacto" class="btn">Reservar</a>
                 </div>
             </div>
         </div>
     </section>
 
-   
-    <!-- Contact Section -->
-    <section id="contacto" class="contact">
+    <!-- Sección de videos -->
+    <section class="social-videos">
         <div class="container">
-            <h2>Contáctanos</h2>
-            <p class="gallery-header" style="text-align: center;">¿Listo para hacer tu evento inolvidable? ¡Escríbenos ahora!</p>
+            <h1>VivaLaParty - Cabinas Fotográficas</h1>
+            <h2>Videos de Nuestros Eventos</h2>
             
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Teléfono</h3>
-                            <a href="tel:+526634625234">+52 663 462 5234</a>
-                        </div>
+            <div class="videos-carousel-container">
+                <div class="videos-nav">
+                    <div class="videos-nav-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
                     </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Email</h3>
-                            <a href="mailto:vivalaparty.tij@gmail.com">vivalaparty.tij@gmail.com</a>
-                        </div>
+                    <div class="videos-nav-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
                     </div>
-                    
-                    <div class="contact-form">
-                    <!-- Formulario modificado -->
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Tu Nombre</label>
-                            <input type="text" id="name" name="name" placeholder="Ingresa tu nombre completo" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Teléfono</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+52 663 462 5234" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="eventType">Tipo de Evento</label>
-                            <select id="eventType" name="event_type" required>
-                                <option value="" disabled selected>Selecciona una opción</option>
-                                <option value="boda">Boda</option>
-                                <option value="cumpleanos">Cumpleaños</option>
-                                <option value="corporativo">Evento Corporativo</option>
-                                <option value="graduacion">Graduación</option>
-                                <option value="quinceanera">Quinceañera</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Cuéntanos sobre tu evento</label>
-                            <textarea id="message" name="message" placeholder="Fecha, lugar, número de invitados, y cualquier detalle importante..." required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-whatsapp">
-                            <i class="fab fa-whatsapp"></i> ENVIAR MENSAJE POR WHATSAPP
-                        </button>
-                    </form>
                 </div>
+                
+                <div class="videos-carousel">
+                    <!-- Video 1 -->
+                    <div class="video-item">
+                        <div class="video-container">
+                            <div class="instagram-embed">
+                                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKa1yPZP4RY/?utm_source=ig_web_copy_link&igsh=MWR6d3dsdTEwcWc4MA==" data-instgrm-version="13"></blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 2 -->
+                    <div class="video-item">
+                        <div class="video-container">
+                            <div class="instagram-embed">
+                                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DK0FXDlS4bY/?uuutm_source=ig_web_copy_link&igsh=M2c1ZXZ4eWQ1aDQw3" data-instgrm-version="13"></blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 3 -->
+                    <div class="video-item">
+                        <div class="video-container">
+                            <div class="instagram-embed">
+                                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DHOmzlWP9Ms/?utm_source=ig_web_copy_link&igsh=MWQyenR3YjhxemRjNg==" data-instgrm-version="13"></blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 4 -->
+                    <div class="video-item">
+                        <div class="video-container">
+                            <div class="instagram-embed">
+                                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DGWPlfWSjCi/?utm_source=ig_web_copy_link&igsh=MnA5OXluOTMwN2E5" data-instgrm-version="13"></blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 5 -->
+                    <div class="video-item">
+                        <div class="video-container">
+                            <div class="instagram-embed">
+                                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DFyTk-4zGLG/?utm_source=ig_web_copy_link&igsh=MW0wM25rcDM1bnkwag==" data-instgrm-version="13"></blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="videos-indicators"></div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://www.instagram.com/oye.vivalaparty/" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-instagram"></i> Ver más en Instagram
+                </a>
             </div>
         </div>
     </section>
     
-    <!-- Notificación flotante -->
-    <div class="notification" id="notification"></div>
+   <!-- Contact Section - ESTILIZADA -->
+<section id="contacto">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contáctanos</h2>
+            
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <div class="contact-item-content">
+                    <h3>Teléfono</h3>
+                    <a href="tel:+526634625234">+52 663 462 5234</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div class="contact-item-content">
+                    <h3>Email</h3>
+                    <a href="mailto:vivalaparty.tij@gmail.com">vivalaparty.tij@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-mobile-alt"></i>
+                <div class="contact-item-content">
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/526634625234">+52 663 462 5234</a>
+                </div>
+            </div>
+            
+            <div class="social-section">
+                <h3>Síguenos en redes</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/oye.vivalaparty" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/oye.vivalaparty/" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.threads.net/@oye.vivalaparty" target="_blank" class="social-icon">
+                        <i class="fab fa-threads"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <h2>Envíanos un mensaje</h2>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Tú nombre</label>
+                    <input type="text" id="name" placeholder="Ingresa tu nombre completo">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="tu@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <div class="phone-options">
+                        <input type="tel" id="phone" placeholder="+52 663 462 5234">
+                        <select id="eventType" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="boda">Boda</option>
+                            <option value="cumpleanos">Cumpleaños</option>
+                            <option value="corporativo">Evento Corporativo</option>
+                            <option value="graduacion">Graduación</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Cuéntanos sobre tu evento...</label>
+                    <textarea id="message" placeholder="Describe los detalles de tu evento aquí..." maxlength="250"></textarea>
+                    <div class="char-count" id="charCount">0/250 caracteres</div>
+                </div>
+                
+                <button type="submit" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> ENVIAR POR WHATSAPP
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
     
-    <!-- Footer -->
+    <!-- Chatbot de WhatsApp -->
+    <div class="chatbot-container">
+        <div class="chatbot-btn">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="chatbot-window">
+            <div class="chatbot-header">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDUiIGZpbGw9IiMyNUQzNjYiLz48cGF0aCBkPSJNNzcuNyw0NC4xYy0wLjQtNi40LTMuMy0xMi0xMC4xLTEzLjdjLTMuNS0wLjgtOS40LTEuNC0xMy43LDEuNGMtMy40LDIuMi01LjksNi41LTcsOS45Yy0xLjEsMy41LTIuNCwxMC4zLDEsMTMuN2MzLjQsMy40LDcuNSwyLjksMTEuMiwxLjljMy4zLTAuOSw2LjMtMy40LDcuNi02LjNjMC43LTEuNSwwLjYtNS4xLDAuMi02LjVjLTAuMy0xLTAuOS0xLjctMS43LTIuMWMtMC45LTAuNC0xLjktMC40LTIuOCwwLjFjLTAuOCwwLjUtMS4zLDEuMy0xLjUsMi4yYy0wLjIsMC45LTAuMSwxLjksMC4yLDIuN2MwLjMsMC44LDAuOCwxLjQsMS41LDEuOGMwLjcsMC40LDEuNSwwLjYsMi4zLDAuNWMwLjktMC4xLDEuNy0wLjUsMi4zLTEuMWMwLjYtMC42LDAuOS0xLjQsMC45LTIuMmMwLTAuOS0wLjMtMS43LTAuOS0yLjNjLTAuNi0wLjYtMS40LTAuOS0yLjItMC45Yy0xLjMsMC0yLjUsMC44LTMuMiwyYy0wLjcsMS4yLTAuNiwyLjcsMC4zLDMuN2MwLjksMSwxLjksMS41LDMuMiwxLjVjMi4xLDAsMy44LTEuNiwzLjgtMy44YzAtMS4zLTAuNS0yLjUtMS40LTMuM2MtMC45LTAuOC0yLjEtMS4yLTMuMy0xLjJjLTEuMiwwLTIuNCwwLjQtMy4zLDEuMmMtMC45LDAuOC0xLjQsMi0xLjQsMy4zYzAsMS4zLDAuNSwyLjUsMS40LDMuM2MwLjksMC44LDIuMSwxLjIsMy4zLDEuMmMxLjMsMCwyLjUtMC40LDMuNS0xLjJjMC45LTAuOCwxLjUtMS45LDEuNy0zLjFjMC4yLTEuMi0wLjEtMi40LTAuOC0zLjRjLTAuNy0xLTEuNy0xLjctMi45LTIuMWMtMS4yLTAuNC0yLjUtMC40LTMuNywwYy0xLjIsMC40LTIuMiwxLjItMi45LDIuMmMtMC43LDEtMSwyLjItMSwzLjRjMCwxLjIsMC4zLDIuNCwxLDMuNGMwLjcsMSwxLjcsMS44LDIuOSwyLjJjMS4yLDAuNCwyLjUsMC40LDMuNywwYzEuMi0wLjQsMi4yLTEuMiwyLjktMi4yYzAuNy0xLDEtMi4yLDEtMy40YzAtMS4yLTAuMy0yLjQtMS0zLjRjLTAuNy0xLTEuNy0xLjgtMi45LTIuMmMtMS4yLTAuNC0yLjUtMC40LTMuNywwYy0xLjIsMC40LTIuMiwxLjItMi45LDIuMmMtMC43LDEtMSwyLjItMSw3OC4xIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==" alt="WhatsApp">
+                <div>
+                    <h4>Asistente VivaLaParty</h4>
+                    <p>En línea</p>
+                </div>
+            </div>
+            <div class="chatbot-messages" id="chatMessages">
+                <div class="message bot-message">
+                    ¡Hola! 👋 Soy el asistente de VivaLaParty. ¿En qué puedo ayudarte hoy?
+                </div>
+                <div class="message bot-message">
+                    Puedes preguntarme sobre nuestros servicios, precios o reservar una cabina para tu evento.
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatInput" placeholder="Escribe tu mensaje...">
+                <button id="sendChatBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer - Reducido -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col footer-about">
-                    <h3>VivaLaParty</h3>
-                    <p>Transformando eventos en experiencias inolvidables desde 2024. Especialistas en cabinas fotográficas, álbumes personalizados y momentos únicos que perdurarán para siempre.</p>
-                    <div class="social-links">
-                        <!-- Facebook -->
-                        <a href="https://www.facebook.com/oye.vivalaparty" class="social-icon" target="_blank">
-                            <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/>
-                            </svg>
-                        </a>
-                        
-                        <!-- Instagram -->
-                        <a href="https://www.instagram.com/oye.vivalaparty/" class="social-icon" target="_blank">
-                            <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                            </svg>
-                        </a>
-                        
-                        <!-- TikTok -->
-                        <a href="#" class="social-icon" target="_blank">
-                            <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M19.589 6.686a4.793 4.793 0 01-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 01-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 013.183-4.51v-3.5a6.329 6.329 0 00-5.394 10.692 6.33 6.33 0 0010.857-4.424V8.687a8.182 8.182 0 004.773 1.526V6.79a4.831 4.831 0 01-1.003-.104z"/>
-                            </svg>
-                        </a>
-                        
-                        <!-- Threads -->
-                        <a href="https://www.threads.com/@oye.vivalaparty" class="social-icon" target="_blank">
-                            <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M19.25,4.5c-0.966,0-1.75,0.784-1.75,1.75v0.5c0,0.138-0.112,0.25-0.25,0.25h-0.5c-0.138,0-0.25-0.112-0.25-0.25v-0.5 C16.5,4.784,15.716,4,14.75,4H9.25C8.284,4,7.5,4.784,7.5,5.75v0.5c0,0.138-0.112,0.25-0.25,0.25h-0.5C6.612,6.5,6.5,6.388,6.5,6.25 v-0.5C6.5,4.784,5.716,4,4.75,4H4.5C4.224,4,4,4.224,4,4.5v15c0,0.276,0.224,0.5,0.5,0.5h15c0.276,0,0.5-0.224,0.5-0.5v-15 C20,4.224,19.776,4,19.25,4H19.25z M18,18.5c0,0.276-0.224,0.5-0.5,0.5h-13C4.224,19,4,18.776,4,18.5v-13C4,5.224,4.224,5,4.5,5h13 C17.776,5,18,5.224,18,5.5V18.5z M8.5,8.5C8.224,8.5,8,8.724,8,9v6c0,0.276,0.224,0.5,0.5,0.5h7c0.276,0,0.5-0.224,0.5-0.5V9 c0-0.276-0.224-0.5-0.5-0.5H8.5z M9,9h6v5H9V9z"/>
-                            </svg>
-                        </a>
-                    </div>
+                <div class="footer-logo">
+                    <img src="logo.png" alt="VivaLaParty Logo">
+                </div>
+                <p>Haciendo tus eventos inolvidables desde 2024</p>
+                
+                <div class="footer-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#incluye">Qué Incluye</a>
+                    <a href="#galeria">Galería</a>
+                    <a href="#precios">Precios</a>
+                    <a href="#contacto">Contacto</a>
                 </div>
                 
-                <div class="footer-col">
-                    <h3>Enlaces Rápidos</h3>
-                    <ul class="footer-links">
-                        <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Inicio</a></li>
-                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Servicios</a></li>
-                        <li><a href="#galeria"><i class="fas fa-chevron-right"></i> Galería</a></li>
-                        <li><a href="#contacto"><i class="fas fa-chevron-right"></i> Contacto</a></li>
-                    </ul>
+                <div class="copyright">
+                    &copy; 2025 VivaLaParty. Todos los derechos reservados.
                 </div>
-                
-                <div class="footer-col">
-                    <h3>Nuestros Servicios</h3>
-                    <ul class="footer-links">
-                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Cabina Fotográfica</a></li>
-                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Cabina 360°</a></li>
-                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Álbumes Personalizados</a></li>
-                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Fotografía para Bodas</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Tecnología + diversión = recuerdos que desafían al tiempo</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-phone-alt"></i> +52 663 462 5234</li>
-                        <li><i class="fas fa-envelope"></i> vivalaparty.tij@gmail.com</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                &copy; 2023 VivaLaParty. Todos los derechos reservados. | Diseñado con ❤️ para crear momentos inolvidables
             </div>
         </div>
     </footer>
 
-    <script>
+   <script>
         // Mobile Menu Toggle
         const mobileMenu = document.querySelector('.mobile-menu');
         const navLinks = document.querySelector('.nav-links');
@@ -1220,83 +1981,199 @@
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     window.scrollTo({
-                        top: target.offsetTop - 80,
+                        top: target.offsetTop - 70,
                         behavior: 'smooth'
                     });
+                    
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                        mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
                 }
             });
         });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // Typewriter Effect
-        const words = ["eventos", "bodas", "xv años", "graduaciones", "empresas", "fiestas"];
-        let wordIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let typeSpeed = 200;
-        let pauseTime = 2000;
-        
-        function typeEffect() {
-            const currentWord = words[wordIndex];
-            const textElement = document.getElementById('typewriter');
+
+        // Carrusel de fotos - Corregido
+        const carouselContainer = document.querySelector('.carousel-container');
+        if (carouselContainer) {
+            const carousel = carouselContainer.querySelector('.carousel');
+            const items = carouselContainer.querySelectorAll('.carousel-item');
+            const prevBtn = carouselContainer.querySelector('.carousel-control.prev');
+            const nextBtn = carouselContainer.querySelector('.carousel-control.next');
+            const indicatorsContainer = carouselContainer.querySelector('.carousel-indicators');
             
-            if (isDeleting) {
-                // Borrar caracter
-                textElement.textContent = currentWord.substring(0, charIndex - 1);
-                charIndex--;
-                typeSpeed = 100;
-            } else {
-                // Escribir caracter
-                textElement.textContent = currentWord.substring(0, charIndex + 1);
-                charIndex++;
-                typeSpeed = 200;
-            }
+            let currentIndex = 0;
+            const totalItems = items.length;
             
-            // Cambio de palabra
-            if (!isDeleting && charIndex === currentWord.length) {
-                isDeleting = true;
-                typeSpeed = pauseTime;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-            }
-            
-            setTimeout(typeEffect, typeSpeed);
-        }
-        
-        // Iniciar el efecto typewriter cuando el documento esté cargado
-        document.addEventListener('DOMContentLoaded', function() {
-            // Iniciar typewriter
-            setTimeout(typeEffect, 1000);
-            
-            // Animaciones para las tarjetas de estadísticas
-            const stats = document.querySelectorAll('.stat-item');
-            stats.forEach(stat => {
-                stat.style.opacity = '0';
-                stat.style.transform = 'translateY(30px)';
+            // Crear indicadores
+            items.forEach((_, index) => {
+                const indicator = document.createElement('span');
+                indicator.addEventListener('click', () => goToSlide(index));
+                indicatorsContainer.appendChild(indicator);
             });
             
-            setTimeout(() => {
-                stats.forEach((stat, index) => {
-                    setTimeout(() => {
-                        stat.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-                        stat.style.opacity = '1';
-                        stat.style.transform = 'translateY(0)';
-                    }, 300 * index);
+            const indicators = indicatorsContainer.querySelectorAll('span');
+            
+            // Actualizar estado visual
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Actualizar indicadores
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentIndex);
                 });
-            }, 1500);
-        });
-        
-        // Formulario de contacto
+            }
+            
+            // Ir a slide específico
+            function goToSlide(index) {
+                currentIndex = index;
+                if (currentIndex >= totalItems) currentIndex = 0;
+                if (currentIndex < 0) currentIndex = totalItems - 1;
+                updateCarousel();
+            }
+            
+            // Navegación
+            prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+            nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+            
+            // Autoavance cada 5 segundos
+            let autoSlide = setInterval(() => goToSlide(currentIndex + 1), 5000);
+            
+            // Pausar autoavance al interactuar
+            carouselContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
+            carouselContainer.addEventListener('mouseleave', () => {
+                autoSlide = setInterval(() => goToSlide(currentIndex + 1), 5000);
+            });
+            
+            // Inicializar
+            updateCarousel();
+            indicators[0].classList.add('active');
+        }
+
+        // Carrusel de videos - Corregido
+        const videosCarouselContainer = document.querySelector('.videos-carousel-container');
+        if (videosCarouselContainer) {
+            const videosCarousel = videosCarouselContainer.querySelector('.videos-carousel');
+            const videoItems = videosCarouselContainer.querySelectorAll('.video-item');
+            const prevVideoBtn = videosCarouselContainer.querySelector('.videos-nav .prev-btn');
+            const nextVideoBtn = videosCarouselContainer.querySelector('.videos-nav .next-btn');
+            const videoIndicatorsContainer = videosCarouselContainer.querySelector('.videos-indicators');
+            
+            let currentVideoIndex = 0;
+            const totalVideos = videoItems.length;
+            let itemsPerView = 3; // Por defecto 3 en desktop
+            
+            // Crear indicadores
+            for (let i = 0; i < totalVideos; i++) {
+                const indicator = document.createElement('div');
+                indicator.classList.add('videos-indicator');
+                indicator.addEventListener('click', () => goToVideo(i));
+                videoIndicatorsContainer.appendChild(indicator);
+            }
+            
+            const videoIndicators = videosCarouselContainer.querySelectorAll('.videos-indicator');
+            
+            // Actualizar estado visual del carrusel de videos
+            function updateVideoCarousel() {
+                const itemWidth = videoItems[0].offsetWidth + 20; // Ancho + margen
+                const transformValue = -currentVideoIndex * itemWidth;
+                videosCarousel.style.transform = `translateX(${transformValue}px)`;
+                
+                // Actualizar indicadores
+                videoIndicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentVideoIndex);
+                });
+                
+                // Reprocesar embeds de Instagram
+                if (typeof Instgrm !== 'undefined') {
+                    Instgrm.Embeds.process();
+                }
+            }
+            
+            // Ir a video específico
+            function goToVideo(index) {
+                currentVideoIndex = index;
+                if (currentVideoIndex >= totalVideos) currentVideoIndex = 0;
+                if (currentVideoIndex < 0) currentVideoIndex = totalVideos - 1;
+                updateVideoCarousel();
+            }
+            
+            // Navegación
+            prevVideoBtn.addEventListener('click', () => {
+                currentVideoIndex--;
+                if (currentVideoIndex < 0) currentVideoIndex = totalVideos - 1;
+                updateVideoCarousel();
+            });
+            
+            nextVideoBtn.addEventListener('click', () => {
+                currentVideoIndex++;
+                if (currentVideoIndex >= totalVideos) currentVideoIndex = 0;
+                updateVideoCarousel();
+            });
+            
+            // Autoavance cada 8 segundos
+            let autoSlideVideos = setInterval(() => {
+                currentVideoIndex++;
+                if (currentVideoIndex >= totalVideos) currentVideoIndex = 0;
+                updateVideoCarousel();
+            }, 8000);
+            
+            // Pausar autoavance al interactuar
+            videosCarousel.addEventListener('mouseenter', () => clearInterval(autoSlideVideos));
+            videosCarousel.addEventListener('mouseleave', () => {
+                autoSlideVideos = setInterval(() => {
+                    currentVideoIndex++;
+                    if (currentVideoIndex >= totalVideos) currentVideoIndex = 0;
+                    updateVideoCarousel();
+                }, 8000);
+            });
+            
+            // Inicializar
+            updateVideoCarousel();
+            videoIndicators[0].classList.add('active');
+            
+            // Ajustar número de elementos visibles según el ancho de pantalla
+            function updateItemsPerView() {
+                if (window.innerWidth <= 768) {
+                    itemsPerView = 1;
+                } else if (window.innerWidth <= 1200) {
+                    itemsPerView = 2;
+                } else {
+                    itemsPerView = 3;
+                }
+            }
+            
+            // Escuchar cambios de tamaño
+            window.addEventListener('resize', () => {
+                updateItemsPerView();
+                updateVideoCarousel();
+            });
+            
+            // Inicializar
+            updateItemsPerView();
+        }
+
+        // ========= SECCIÓN DE CONTACTO =========
+        // Contador de caracteres para el textarea
+        const messageInput = document.getElementById('message');
+        const charCountElement = document.getElementById('charCount');
+
+        if (messageInput && charCountElement) {
+            messageInput.addEventListener('input', function() {
+                const currentLength = this.value.length;
+                charCountElement.textContent = `${currentLength}/250 caracteres`;
+                
+                if (currentLength >= 230) {
+                    charCountElement.classList.add('limit');
+                } else {
+                    charCountElement.classList.remove('limit');
+                }
+            });
+        }
+
+        // Validación y envío del formulario
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
@@ -1308,9 +2185,14 @@
                 const eventType = document.getElementById('eventType').value;
                 const message = document.getElementById('message').value;
                 
+                if (!name || !email || !phone || !eventType || !message) {
+                    alert('Por favor, completa todos los campos requeridos');
+                    return;
+                }
+                
                 // Crear el mensaje para WhatsApp
                 const whatsappMessage = 
-                    `*Nuevo mensaje de contacto VivaLaParty*%0A%0A` +
+                    `*Nuevo mensaje de contacto:*%0A%0A` +
                     `*Nombre:* ${name}%0A` +
                     `*Email:* ${email}%0A` +
                     `*Teléfono:* ${phone}%0A` +
@@ -1325,9 +2207,120 @@
                 
                 // Resetear el formulario
                 this.reset();
+                if (charCountElement) {
+                    charCountElement.textContent = '0/250 caracteres';
+                    charCountElement.classList.remove('limit');
+                }
             });
         }
+
+        // Chatbot de WhatsApp
+        const chatbotBtn = document.querySelector('.chatbot-btn');
+        const chatbotWindow = document.querySelector('.chatbot-window');
+        const chatMessages = document.getElementById('chatMessages');
+        const chatInput = document.getElementById('chatInput');
+        const sendChatBtn = document.getElementById('sendChatBtn');
         
+        if (chatbotBtn && chatbotWindow) {
+            // Abrir/cerrar chatbot
+            chatbotBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (chatbotWindow.style.display === 'flex') {
+                    chatbotWindow.style.display = 'none';
+                } else {
+                    chatbotWindow.style.display = 'flex';
+                    // Scroll al final de los mensajes
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }
+            });
+            
+            // Cerrar chatbot al hacer clic fuera
+            document.addEventListener('click', (e) => {
+                if (!chatbotWindow.contains(e.target) && !chatbotBtn.contains(e.target)) {
+                    chatbotWindow.style.display = 'none';
+                }
+            });
+            
+            // Prevenir que el clic dentro del chatbot cierre la ventana
+            chatbotWindow.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+            
+            // Enviar mensaje en el chatbot
+            function sendMessage() {
+                const message = chatInput.value.trim();
+                if (!message) return;
+                
+                // Agregar mensaje del usuario
+                addMessage(message, 'user');
+                
+                // Limpiar input
+                chatInput.value = '';
+                
+                // Simular respuesta después de un breve retraso
+                setTimeout(() => {
+                    // Respuestas automatizadas
+                    let response;
+                    if (message.toLowerCase().includes('hola') || message.toLowerCase().includes('buenas')) {
+                        response = "¡Hola! 😊 ¿En qué puedo ayudarte? Puedes preguntar sobre nuestros servicios, precios o reservar una cabina para tu evento.";
+                    } else if (message.toLowerCase().includes('precio') || message.toLowerCase().includes('cuesta')) {
+                        response = "Tenemos varios paquetes disponibles: 🎉\n\n" + 
+                                "• Básico: $3200 (2 horas)\n" +
+                                "• Premium: $4500 (3 horas)\n" +
+                                "• Deluxe: $5800 (4 horas)\n\n" +
+                                "¿Te gustaría más detalles de algún paquete en particular?";
+                    } else if (message.toLowerCase().includes('reservar') || message.toLowerCase().includes('disponible')) {
+                        response = "¡Claro! Para reservar necesito algunos datos:\n\n" +
+                                "1. Tipo de evento\n" +
+                                "2. Fecha y hora\n" +
+                                "3. Lugar del evento\n" +
+                                "4. Número de invitados estimado\n\n" +
+                                "¿Quieres proporcionarme estos detalles ahora?";
+                    } else if (message.toLowerCase().includes('gracias') || message.toLowerCase().includes('agradezco')) {
+                        response = "¡De nada! 😊 ¿Hay algo más en lo que pueda ayudarte?";
+                    } else {
+                        response = "Gracias por tu mensaje. Puedes contactarnos directamente por WhatsApp al +52 663 462 5234 para una respuesta más inmediata, o déjame saber cómo puedo ayudarte con: precios, reservaciones o información sobre nuestros servicios.";
+                    }
+                    
+                    addMessage(response, 'bot');
+                }, 1000);
+            }
+            
+            // Enviar mensaje al hacer clic en el botón
+            if (sendChatBtn) {
+                sendChatBtn.addEventListener('click', sendMessage);
+            }
+            
+            // Enviar mensaje al presionar Enter
+            if (chatInput) {
+                chatInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        sendMessage();
+                    }
+                });
+            }
+            
+            // Agregar mensaje al chat
+            function addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${sender}-message`;
+                messageDiv.textContent = text;
+                chatMessages.appendChild(messageDiv);
+                
+                // Scroll al final
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        }
+
+        // Forzar procesamiento de embeds después de cargar la página
+        window.addEventListener('load', function() {
+            if (typeof Instgrm !== 'undefined') {
+                Instgrm.Embeds.process();
+            }
+        });
     </script>
+    
+    <!-- Script de Instagram Embed - Corregido -->
+    <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
