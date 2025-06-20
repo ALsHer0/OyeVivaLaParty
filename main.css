@@ -392,6 +392,10 @@
         .service-content {
             padding: 2rem;
         }
+
+        .service-content p {
+            color:var(--dark);
+        }
         
         .service-content h3 {
             font-size: 1.6rem;
